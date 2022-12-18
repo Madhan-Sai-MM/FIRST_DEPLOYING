@@ -60,7 +60,7 @@ app.post('/myNews', (req, res) => {
 
 const PORT = 8000
 app.listen(PORT, function() {
-  console.log('listening on 9999')
+  console.log('listening on 8000')
 })
 
 
