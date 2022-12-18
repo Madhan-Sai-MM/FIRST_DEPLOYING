@@ -1,0 +1,64 @@
+body{
+    background-color: cadetblue;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-bottom: 5%;
+}
+
+label{
+    font-weight: bold;
+    font-size: large;
+}
+
+form{
+    border: 2px solid cadetblue;
+    background-color: cadetblue;
+    padding : 20px;
+    width: 500px;
+    border-radius: 69px;
+}
+
+.dynamic-output{
+    border: 2px solid white;
+    border-radius: 22px;
+    color: white;
+    font-size: larger;
+    width: 1400px;
+    padding: 9px;
+    margin-left: 9px;
+}
+
+hr{
+    background-color: white;
+    height: 9px;
+}
+
+.htwo{
+    color: white;
+    font-weight: bolder;
+}
+
+.ejs-data{
+    background-color: teal;
+    border-radius: 69px;
+    width: fit-content;
+    padding: 9px;
+    margin-left: 2%;
+}
+
+button{
+    border: 2px solid goldenrod;
+    border-radius: 45px;
+    padding: 9px;
+    font-size: x-large;
+    font-weight: bold;
+}
+
+
+button:hover{
+    background-color:coral;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
