@@ -4,8 +4,8 @@ const bodyParser = require('body-parser');
 const {MongoClient} = require('mongodb');
 
 //load all key-value pairs in .env file to process.env obj
-//const dotenv = require('dotenv')
-// dotenv.config()
+const dotenv = require('dotenv')
+dotenv.config()
 const app = express();
 app.use(express.json())
 
@@ -22,8 +22,8 @@ app.use(bodyParser.urlencoded({ extended: true }))
 //OTHER-WISE IT WONT WORK
 app.use(express.static(__dirname + '/views'));
 
-const connectionString = "mongodb+srv://madhan:1234@cluster0.uuaneaz.mongodb.net/?retryWrites=true&w=majority"
-MongoClient.connect(connectionString, {
+//const connectionString = "mongodb+srv://madhan:1234@cluster0.uuaneaz.mongodb.net/?retryWrites=true&w=majority"
+MongoClient.connect(process.env.MONGO_URL, {
   useNewUrlParser: true,
   //useFindAndModify: false,
   useUnifiedTopology: true
@@ -58,12 +58,11 @@ app.post('/myNews', (req, res) => {
 //global obj to access all env. variables
 // console.log(process.env)
 
-const PORT = 8000
-app.listen(PORT, function() {
-  console.log('listening on 8000')
+app.listen(8006, function() {
+  console.log('listening on 8006')
 })
 
 
 })
   .catch(error => console.error(error))
-  
+   
